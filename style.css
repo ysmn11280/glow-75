@@ -1,36 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Arial';
-  background: #f8f5f2;
-  text-align: center;
-  color: #333;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Georgia", serif;
+    background: #f8f3ee;
+    color: #4b4038;
 }
 
-.center {
-  margin-top: 100px;
-}
-
-button {
-  background: #e8ddd4;
-  border: none;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 20px;
-  font-size: 16px;
+.app {
+    max-width: 430px;
+    margin: auto;
+    padding: 20px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.8);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(120,90,60,0.08);
+    border: 1px solid #eee2d7;
 }
+
+h1 {
+    font-size: 38px;
+    color: #8d6e63;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #8d6e63;
+}
+
+h3 {
+    color: #a7836b;
+}
+
+p {
+    color: #75665c;
+}
+
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    background: #d9b8a7;
+    color: white;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #c99b84;
+}
+
 
 label {
-  display: block;
-  margin: 10px;
+    display: block;
+    background: #faf5f0;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 15px;
 }
 
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c99b84;
+    margin-right: 10px;
+}
+
+
+.progress {
+    width: 100%;
+    height: 14px;
+    background: #eee4dc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(
+        90deg,
+        #d9b8a7,
+        #b8956d
+    );
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 15px;
+    border: 1px solid #e6d8cc;
+    padding: 15px;
+    font-family: inherit;
+    background: #fffaf5;
+}
+
+
 .hidden {
-  display: none;
+    display: none;
+}
+
+
+@media(max-width:500px){
+
+    .app {
+        padding:15px;
+    }
+
+    h1 {
+        font-size:32px;
+    }
 }
