@@ -141,6 +141,7 @@ function updateDisplay(score, streak, day){
 
 
     updateDashboard(score, day);
+    createCalendar(day);
 
 }
 
