@@ -139,6 +139,73 @@ function updateDisplay(score, streak, day){
     document.getElementById("bar").style.width =
     (score/6)*100 + "%";
 
+
+    updateDashboard(score, day);
+
+}
+
+
+
+function updateDashboard(score, day){
+
+    let completed = day - 1;
+
+    let percentage =
+    Math.round((completed / 75) * 100);
+
+
+    let best =
+    Number(localStorage.getItem(currentUser + "_best"))
+    || 0;
+
+
+    if(score > best){
+
+        localStorage.setItem(
+        currentUser + "_best",
+        score
+        );
+
+        best = score;
+    }
+
+
+    document.getElementById("completed")
+    .innerHTML =
+    "Days completed: " + completed + " / 75";
+
+
+    document.getElementById("percentage")
+    .innerHTML =
+    "Progress: " + percentage + "%";
+
+
+    document.getElementById("best")
+    .innerHTML =
+    "🏆 Best score: " + best + "/6";
+
+
+    if(percentage >= 75){
+
+        document.getElementById("message")
+        .innerHTML =
+        "✨ Amazing! Your glow up is almost complete";
+
+    } 
+    else if(percentage >= 25){
+
+        document.getElementById("message")
+        .innerHTML =
+        "🌸 You are building your best self";
+
+    } 
+    else {
+
+        document.getElementById("message")
+        .innerHTML =
+        "🤍 Every day counts. Keep going";
+    }
+
 }
 function goBack(){
 
