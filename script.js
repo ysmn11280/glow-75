@@ -140,3 +140,13 @@ function updateDisplay(score, streak, day){
     (score/6)*100 + "%";
 
 }
+function goBack(){
+
+    document.getElementById("dashboard")
+    .classList.add("hidden");
+
+    document.getElementById("welcome")
+    .classList.remove("hidden");
+
+    currentUser = "";
+}
