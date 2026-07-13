@@ -1,35 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Glow Up Tracker</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glow 75 🤍</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div id="userSelect" class="center">
-  <h1>🌸 Choose Your Vibe</h1>
-  <button onclick="selectUser('YSMN')">YSMN 💅</button>
-  <button onclick="selectUser('TSNM')">TSNM 💖</button>
+<div class="app">
+
+<!-- Welcome Screen -->
+<section id="welcome" class="card">
+    <h1>🤍 Glow 75</h1>
+    <p>75 days to become your best self</p>
+
+    <h3>Choose your profile</h3>
+
+    <button onclick="chooseUser('YSMN')">
+        🌸 YSMN
+    </button>
+
+    <button onclick="chooseUser('TSNM')">
+        🌷 TSNM
+    </button>
+</section>
+
+
+<!-- Main App -->
+<section id="dashboard" class="hidden">
+
+<div class="card">
+<h2 id="hello"></h2>
+<p id="day"></p>
 </div>
 
-<div id="app" class="hidden">
-  <h2 id="username"></h2>
-  <p id="streak"></p>
 
-  <div class="card">
-    <label><input type="checkbox" id="junk"> No Junk Food</label>
-    <label><input type="checkbox" id="sugar"> No Sugar</label>
-    <label><input type="checkbox" id="water"> Only Water</label>
-    <label><input type="checkbox" id="workout"> Workout</label>
-    <label><input type="checkbox" id="reading"> Reading</label>
-    <label><input type="checkbox" id="learn"> Learn</label>
-  </div>
+<div class="card">
 
-  <button onclick="saveProgress()">Save Day ✨</button>
-  <h3 id="score"></h3>
+<h3>✨ Daily Reset</h3>
+
+<label>
+<input type="checkbox" class="habit">
+🍔 No junk food
+</label>
+
+<label>
+<input type="checkbox" class="habit">
+🍭 No sugar
+</label>
+
+<label>
+<input type="checkbox" class="habit">
+💧 Only water
+</label>
+
+<label>
+<input type="checkbox" class="habit">
+💪 45 min workout
+</label>
+
+<label>
+<input type="checkbox" class="habit">
+📖 Read 10 pages
+</label>
+
+<label>
+<input type="checkbox" class="habit">
+🧠 Learn something new
+</label>
+
+
+<button onclick="saveDay()">
+Save today's progress ✨
+</button>
 
 </div>
+
+
+<div class="card">
+
+<h3>🔥 Progress</h3>
+
+<p id="score">
+Score: 0/6
+</p>
+
+<div class="progress">
+<div id="bar"></div>
+</div>
+
+<p id="streak">
+🔥 Streak: 0 days
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌸 Reflection</h3>
+
+<textarea id="notes" placeholder="How was today?"></textarea>
+
+</div>
+
+
+</section>
+
+</div>
+
 
 <script src="script.js"></script>
+
 </body>
 </html>
