@@ -217,3 +217,33 @@ function goBack(){
 
     currentUser = "";
 }
+function createCalendar(day){
+
+    let calendar =
+    document.getElementById("calendar");
+
+    calendar.innerHTML = "";
+
+
+    for(let i = 1; i <= 75; i++){
+
+        let box =
+        document.createElement("div");
+
+        box.className = "day-box";
+
+        box.innerHTML = i;
+
+
+        if(i < day){
+
+            box.classList.add("completed");
+
+        }
+
+
+        calendar.appendChild(box);
+
+    }
+
+}
