@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glow Up Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="userSelect" class="center">
+  <h1>🌸 Choose Your Vibe</h1>
+  <button onclick="selectUser('YSMN')">YSMN 💅</button>
+  <button onclick="selectUser('TSNM')">TSNM 💖</button>
+</div>
+
+<div id="app" class="hidden">
+  <h2 id="username"></h2>
+  <p id="streak"></p>
+
+  <div class="card">
+    <label><input type="checkbox" id="junk"> No Junk Food</label>
+    <label><input type="checkbox" id="sugar"> No Sugar</label>
+    <label><input type="checkbox" id="water"> Only Water</label>
+    <label><input type="checkbox" id="workout"> Workout</label>
+    <label><input type="checkbox" id="reading"> Reading</label>
+    <label><input type="checkbox" id="learn"> Learn</label>
+  </div>
+
+  <button onclick="saveProgress()">Save Day ✨</button>
+  <h3 id="score"></h3>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
