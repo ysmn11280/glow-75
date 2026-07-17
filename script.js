@@ -248,3 +248,26 @@ function createCalendar(day){
     }
 
 }
+
+function updateAchievements(day, streak, score) {
+
+  if (day >= 1) {
+    document.getElementById("ach-first").innerText = "🌱 First Day ✓";
+  }
+
+  if (streak >= 7) {
+    document.getElementById("ach-streak").innerText = "🔥 7 Day Streak ✓";
+  }
+
+  if (day >= 38) {
+    document.getElementById("ach-half").innerText = "✨ Halfway ✓";
+  }
+
+  if (day >= 75) {
+    document.getElementById("ach-master").innerText = "👑 75 Days ✓";
+  }
+
+  if (score === 6) {
+    document.getElementById("ach-perfect").innerText = "💎 Perfect Score ✓";
+  }
+}
